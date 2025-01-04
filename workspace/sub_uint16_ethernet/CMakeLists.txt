@@ -6,4 +6,4 @@ set(EXTRA_COMPONENT_DIRS ../..)
 add_compile_options(-w)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(sub_uint16)
+project(sub_uint16_ethernet)
