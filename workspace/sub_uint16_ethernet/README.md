@@ -1,7 +1,6 @@
 # Ethernet Example Trial Manual for mros2-esp32
 
 ## Table of Contents
-
 1. [Introduction](#introduction)  
    1.1 [Purpose of the document](#purpose-of-the-document)  
    1.2 [Overview of the Ethernet Example](#overview-of-the-ethernet-example)  
@@ -39,7 +38,8 @@
    8.1 [Common Issues and Solutions](#common-issues-and-solutions)  
 
 9. [Appendix](#appendix)  
-   9.1 [How to Check WiFi or Ethernet Settings After `idf.py menuconfig`](#how-to-check-wifi-or-ethernet-settings-after-idfpy-menuconfig)  
+   9.1 [How to Check WiFi or Ethernet Setti
+
 
 ## 1. Introduction
 This document provides instructions for trying Ethernet instead of WiFi in mros2-esp32.
