@@ -1,5 +1,46 @@
 # Ethernet Example Trial Manual for mros2-esp32
 
+## Table of Contents
+
+1. [Introduction](#introduction)  
+   1.1 [Purpose of the document](#purpose-of-the-document)  
+   1.2 [Overview of the Ethernet Example](#overview-of-the-ethernet-example)  
+
+2. [Overview](#overview)  
+   2.1 [Hardware Requirements](#hardware-requirements)  
+   2.2 [Software Requirements](#software-requirements)  
+
+3. [Licenses and Security Policy](#licenses-and-security-policy)  
+   3.1 [Espressif ESP-IDF License and Security Policy](#espressif-esp-idf-license-and-security-policy)  
+   3.2 [mROS-base/mros2-esp32 License](#mros-base-mros2-esp32-license)  
+   3.3 [mros2-host-examples License](#mros2-host-examples-license)  
+
+4. [Files Related to Ethernet Example for mros2-esp32](#files-related-to-ethernet-example-for-mros2-esp32)  
+   4.1 [Integration of ESP-IDF Ethernet Sample Code](#integration-of-esp-idf-ethernet-sample-code)  
+   4.2 [Modifications and Renaming of Files](#modifications-and-renaming-of-files)  
+
+5. [Connecting the Hardware](#connecting-the-hardware)  
+   5.1 [Connecting the Ethernet Module to the ESP32](#connecting-the-ethernet-module-to-the-esp32)  
+   5.2 [Hardware Pin Layout and SPI Configuration](#hardware-pin-layout-and-spi-configuration)  
+   5.3 [Checklist](#checklist)  
+
+6. [Configuration, Build, and Flash the Program](#configuration-build-and-flash-the-program)  
+   6.1 [Ethernet Configuration via `idf.py menuconfig`](#ethernet-configuration-via-idfpy-menuconfig)  
+   6.2 [Selecting the Example and SPI Settings](#selecting-the-example-and-spi-settings)  
+   6.3 [Building and Flashing the Firmware](#building-and-flashing-the-firmware)  
+   6.4 [Testing Ethernet Connectivity](#testing-ethernet-connectivity)  
+
+7. [Testing Ethernet in Another Workspace](#testing-ethernet-in-another-workspace)  
+   7.1 [Copying `Kconfig.projbuild`](#copying-kconfigprojbuild)  
+   7.2 [Configuration and Build in Another Workspace](#configuration-and-build-in-another-workspace)  
+   7.3 [Example Results](#example-results)  
+
+8. [Troubleshooting](#troubleshooting)  
+   8.1 [Common Issues and Solutions](#common-issues-and-solutions)  
+
+9. [Appendix](#appendix)  
+   9.1 [How to Check WiFi or Ethernet Settings After `idf.py menuconfig`](#how-to-check-wifi-or-ethernet-settings-after-idfpy-menuconfig)  
+
 ## 1. Introduction
 This document provides instructions for trying Ethernet instead of WiFi in mros2-esp32.
 The use of WiFi is standard in mros2-esp32, but here we will introduce an example of Ethernet connection.
